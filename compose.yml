@@ -1,11 +1,11 @@
 services:
   db:
-    image: rsanzfloridauni/db_pinacoteca:v1
+    image: jvboronatjosep/db_pinacoteca:v2
     container_name: contenedor_php_pinacoteca
     ports:
     - "3306:3306"
   php:
-    image: rsanzfloridauni/php_pinacoteca:v1
+    image: jvboronatjosep/php_pinacoteca:v2
     container_name: contenedor_db_pinacoteca
     ports:
     - "8080:80"

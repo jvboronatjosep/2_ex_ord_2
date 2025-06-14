@@ -23,15 +23,15 @@ jobs:
       - name: Build and push DB Docker image
         run: |
           cd mysql
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/db_pinacoteca:v1 .
-          docker push ${{ secrets.DOCKER_USERNAME }}/db_pinacoteca:v1
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/db_pinacoteca:v2 .
+          docker push ${{ secrets.DOCKER_USERNAME }}/db_pinacoteca:v2
 
       # Construir y subir la imagen de la aplicación
       - name: Build and push PHP Docker image
         run: |
           cd php
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/php_pinacoteca:v1 .
-          docker push ${{ secrets.DOCKER_USERNAME }}/php_pinacoteca:v1
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/php_pinacoteca:v2 .
+          docker push ${{ secrets.DOCKER_USERNAME }}/php_pinacoteca:v2
 
       # Transferir el archivo compose.yml al servidor remoto
       - name: Transfer compose.yml to remote server
